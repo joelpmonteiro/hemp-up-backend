@@ -18,9 +18,7 @@ const corsOp: cors.CorsOptions = {
 }
 
 const app = Router()
-app.options("/contact", cors<Request>(corsOp))
 app.post('/contact', contact.contactHemp)
-app.options("/profissional", cors<Request>(corsOp))
 app.post('/profissional', contact.professionalHemp)
 app.get('/', (req, res) => {
     res.status(200).json({ msg: 'FuckThis' })

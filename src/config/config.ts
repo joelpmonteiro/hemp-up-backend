@@ -1,24 +1,17 @@
 //starter .env
-//import 'dotenv/config'
+import 'dotenv/config'
 import express, { Request } from "express";
 import cors from "cors";
 import routers from "../routers/routers"
 
 const app = express()
-const whitelist = ['https://hempupcaring.com', 'https://hempupcaring.com/']
+const whitelist = ['*', '*']
 
 
 
 //cors
 const corsOp: cors.CorsOptions = {
-    origin: function (origin: any, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            console.log('origin do url: ', origin)
-            callback(new Error('Not allowed by CORS'))
-        }
-    },
+    origin: "*",
     credentials: true,
     optionsSuccessStatus: 200,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -31,7 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 
 //Enable CORS for all HTTP methods
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://hempupcaring.com");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Credentials", "true")
     res.header(
         "Access-Control-Allow-Headers",
@@ -43,8 +36,6 @@ app.use((req, res, next) => {
     //Access - Control - Max - Age: 86400
     next();
 });
-
-app.use(cors(corsOp))
 
 
 app.use('/', routers)

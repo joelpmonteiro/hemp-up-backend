@@ -7,7 +7,7 @@ import { queue } from "../interfaces/iqueue"
 
 
 const queues = Object.values(jobs).map(job => ({
-    bull: new Queue(job.key, `redis://@${redisConfig.host}:${redisConfig.port}`),
+    bull: new Queue(job.key, `redis://:FjodLwbtJTPcohc1UoVvZkBCIXQpP6Qa@${redisConfig.host}:${redisConfig.port}`),
     name: job.key,
     handle: job.handle,
     options: job.options
