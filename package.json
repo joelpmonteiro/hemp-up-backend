@@ -1,0 +1,36 @@
+{
+  "name": "hemp-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm-run-all -p dev:*",
+    "dev:server": "ts-node-dev --respawn --transpile-only index.ts",
+    "dev:queue": "ts-node-dev --respawn --transpile-only src/queue.ts",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/api": "^3.10.0",
+    "@bull-board/express": "^3.10.0",
+    "bull": "^4.5.5",
+    "bull-board": "^2.1.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.15.8",
+    "@types/bull-board": "^0.6.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/nodemailer": "^6.4.4",
+    "npm-run-all": "^4.1.5",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  }
+}

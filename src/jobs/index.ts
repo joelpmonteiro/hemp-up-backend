@@ -1,0 +1,1 @@
+export { default as contactMail } from "./contactMail"
