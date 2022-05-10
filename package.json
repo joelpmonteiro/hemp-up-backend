@@ -8,7 +8,8 @@
     "dev": "npm-run-all -p dev:*",
     "dev:server": "ts-node-dev --respawn --transpile-only index.ts",
     "dev:queue": "ts-node-dev --respawn --transpile-only src/queue.ts",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": " tsc"
   },
   "keywords": [],
   "author": "",
