@@ -1,5 +1,5 @@
 //starter .env
-import 'dotenv/config'
+require('dotenv').config()
 import express, { Request } from "express";
 import cors from "cors";
 import routers from "../routers/routers"
