@@ -24,9 +24,7 @@ MAIL_HOST=
 MAIL_PORT=
 MAIL_USER=
 MAIL_PASS=
-##^!#E&lvNV!!lj%SHeoeC
 
-##REDIS_HOST=redis-12123.c62.us-east-1-4.ec2.cloud.redislabs.com
 REDIS_HOST=localhost
 REDIS_PORT=6379
 ##6379
