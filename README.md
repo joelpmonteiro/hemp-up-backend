@@ -14,3 +14,20 @@ e nele foi usado essas tecnologias:**
 > [!WARNING]
 > E nesse projeto aprendi bastante sobre filas(queues) pois era algo que me faltava estudar nessa epoca
   
+### Configuração simples
+
+renomeie o arquivo ```.env.example``` para .env e adicone esse conteudo:
+
+```
+PORT=3334
+MAIL_HOST=
+MAIL_PORT=
+MAIL_USER=
+MAIL_PASS=
+##^!#E&lvNV!!lj%SHeoeC
+
+##REDIS_HOST=redis-12123.c62.us-east-1-4.ec2.cloud.redislabs.com
+REDIS_HOST=localhost
+REDIS_PORT=6379
+##6379
+```
