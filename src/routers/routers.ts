@@ -20,7 +20,5 @@ const corsOp: cors.CorsOptions = {
 const app = Router()
 app.post('/contact', contact.contactHemp)
 app.post('/profissional', contact.professionalHemp)
-app.get('/', (req, res) => {
-    res.status(200).json({ msg: 'FuckThis' })
-})
+
 export default app
